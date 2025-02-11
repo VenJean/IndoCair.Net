@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndoCair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+</head>
+<body class="bg-primary p-0 m-0">
+    <div class="text-white">
+        <nav id="navbar" class="fixed w-full top-0 start-0 bg-primary z-50 navbar-visible md:px-5 xl:px-20 lg:py-3">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="assets/logo.png" class="h-8" alt="Flowbite Logo">
+                </a>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
+                    <div class="flex gap-x-2 justify-center items-center">
+                        <a href="#" class="text-white rounded-full text-sm px-4 py-1 text-center hover:bg-white hover:text-secondary bg-secondary md:px-8 md:py-2 md:text-lg" onclick="showAlert(event)">Login</a>
+                        <a href="#" class="text-white rounded-full text-sm px-4 py-1 text-center hover:bg-secondary border border-1 border-secondary md:px-8 md:py-2 md:text-lg md:border-2" onclick="showAlert(event)">Register</a>
+                    </div>
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white" aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between w-full hidden md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="grid gap-y-2 text-center p-4 md:p-0 md:text-lg mt-4 md:space-x-8 rtl:space-x-reverse md:text-start md:flex md:flex-row md:mt-0">
+                        <li class="w-full md:w-auto">
+                            <a href="#" class="text-secondary font-bold hover:text-secondary transition-all durarion-300" onclick="showAlert(event)">Home</a>
+                        </li>
+                        <li class="w-full md:w-auto">
+                            <a href="#" class="text-white hover:text-secondary transition-all durarion-300" onclick="showAlert(event)">Tutorial</a>
+                        </li>
+                        <li class="w-full md:w-auto">
+                            <a href="#" class="text-white hover:text-secondary transition-all durarion-300" onclick="showAlert(event)">Syarat & Ketentuan</a>
+                        </li>
+                        <li class="w-full md:w-auto">
+                            <a href="#" class="text-white hover:text-secondary transition-all durarion-300" onclick="showAlert(event)">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-col gap-y-12 mt-14 px-5 md:flex-row md:justify-center md:gap-x-5 md:mt-28 md:px-10 lg:py-28 lg:mt-20 lg:gap-x-16 xl:px-24">
+            <div class="grid gap-y-6 mt-10 relative">
+                <h1 class="text-4xl font-bold md:text-6xl"><span class="text-secondary">Indo</span>Cair.Net</h1>
+                <!-- TODO: Animation -->
+                <h3 class="font-bold text-2xl md:text-4xl">Withdraw & Top up Paypal Dengan <span id="dynamicText" class="text-sky-400">Mudah</span></h3>
+                <div class="md:text-center">
+                    <a class="bg-secondary px-3 py-2 rounded-xl hover:bg-opacity-70 lg:text-lg md:font-semibold md:px-4 md:py-3" href="https://api.whatsapp.com/send?phone=6281295149423&text=Halo%20IndoCair.Net&source=&data=">Withdraw Sekarang</a>
+                </div>
+                <p class="lg:text-lg">
+                    Rate Rupiah : <span class="text-secondary font-bold">Rp.16.260,-</span> <br> <span class="font-bold">37.200</span> Transaksi Berhasil
+                </p>
+
+                <div class="absolute w-56 aspect-square bg-secondary rounded-3xl rotate-45 -z-10 -bottom-24 -left-36 hidden md:block"></div>
+            </div>
+            <div class="relative grid items-center">
+                <div class="grid relative gap-y-5 z-20 px-5 mt-10 sm:px-36 md:px-0 lg:mt-2 lg:px-6 xl:px-10">
+                    <div class="flex justify-between items-center">
+                        <div class="w-20 lg:w-24">
+                            <img class="rounded-md" src="assets/bri-logo.jpg" alt="logo">
+                        </div>
+                        <div class="w-20 lg:w-24">
+                            <img class="rounded-md" src="assets/bni-logo.jpg" alt="logo">
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img class="w-20 lg:w-24 rounded-full" src="assets/paypal-logo.jpg" alt="logo">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="w-20 lg:w-24">
+                            <img class="rounded-md" src="assets/bca-logo.jpg" alt="logo">
+                        </div>
+                        <div class="w-20 lg:w-24">
+                            <img class="rounded-md" src="assets/dana-logo.jpg" alt="logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="circle inline-flex w-72 aspect-square border border-4 absolute top-0 border-secondary rounded-full lg:scale-125"></div>
+                </div>
+                <div class="text-center mt-5 lg:mt-16">
+                    <p>Dengan <span class="font-bold text-secondary">Support</span> transfer dana melalui beberapa bank terkemuka diindonesia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-third mt-5 py-5 px-5 md:px-10 xl:px-24 lg:py-16">
+            <h4 class="font-bold text-xl text-center lg:text-2xl">
+                Keuntungan Menggunakan <br>Jasa <span class="text-secondary">Indo</span>Cair.Net
+            </h4>
+
+            <div class="grid gap-y-5 md:grid-cols-2 md:gap-8 xl:gap-24">
+                <div>
+                    <div class="flex justify-center">
+                        <img src="assets/keamanan.png" alt="image">
+                    </div>
+                    <div>
+                        <h6 class="font-bold">keamanan terjamin</h6>
+                        <p>IndoCair.Net menggunakan akun whatsapp resmi dari perusahaan dan didukung oleh beberapa bank lokal indonesia, serta melakukan ketentuan perusahaan seperti pengembalian dana atau Refund apabila dana tidak diterima dalam 2 Jam kedepan, dengan demikian membuat dana yang ditransfer terjamin dengan baik.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-center">
+                        <img src="assets/duit.png" alt="image">
+                    </div>
+                    <div>
+                        <h6 class="font-bold">Biaya Administrasi Terjangkau</h6>
+                        <p>Biaya administrasi yang sangat terjangkau mulai dari 10 ribu rupiah saja dan dapat mentransfer tanpa potongan admin apabila dana yang di transfer lebih dari 50$.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-center">
+                        <img src="assets/waktu.png" alt="image">
+                    </div>
+                    <div>
+                        <h6 class="font-bold">Transfer dalam hitungan menit</h6>
+                        <p>Tanpa menunggu waktu yang lama seperti menggunakan pencairan dari aplikasi paypal secara langsung, Indocair.Net melakukan layanan selama 24jam dan dalam hitungan menit dana anda akan tiba di rekening yang sudah ditentukan.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-center">
+                        <img src="assets/bank.png" alt="image">
+                    </div>
+                    <div>
+                        <h6 class="font-bold">Withdraw Bank LOKAL</h6>
+                        <p>Indocair.Net menerima layanan pencairan saldo paypal kepada bank-bank lokal indonesia yang dituju, seperti : Mandiri, BCA, Bri, Bni, Dan lain-lain, Serta menerima transaksi melalui E-wallet Indonesia seperti : Dana, Ovo dan GoPay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-primary relative mx-auto rounded-lg shadow-lg p-5 md:px-10 lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:py-16">
+            <h2 class="text-2xl font-semibold mb-4 md:text-center z-10 lg:mb-0">Rate Dollar - Rupiah:</h2>
+            <form id="converterForm" class="text-black space-y-4 z-10 md:flex md:items-center md:justify-center md:space-y-0 md:gap-x-2">
+                <div>
+                    <input type="number" id="usdAmount" name="usdAmount" class="mt-1 w-full border-none px-6 sm:text-sm rounded-full md:mt-0 lg:py-4" placeholder="Input Dollar" required>
+                </div>
+                <div class="text-white">
+                    <input type="text" id="idrAmount" name="idrAmount" class="mt-1 w-full border-none px-6 bg-secondary sm:text-sm rounded-full md:mt-0 lg:py-4" placeholder="Total Rupiah" readonly>
+                </div>
+                <div class="text-white">
+                    <input type="text" id="adminFee" name="adminFee" class="mt-1 w-full border-none px-6 bg-secondary sm:text-sm rounded-full md:mt-0 lg:py-4" placeholder="Biaya Admin" readonly>
+                </div>
+            </form>
+            <div class="absolute w-24 aspect-square bg-secondary rounded-full hidden lg:block left-16 top-2"></div>
+            <div class="absolute w-36 aspect-square bg-secondary rounded-full hidden lg:block left-72 top-4 ms-16"></div>
+        </div>
+
+        <div class="bg-primary px-5 py-5 border-t-4 md:px-20 lg:grid lg:justify-center">
+            <h2 class="text-2xl font-semibold my-4 text-center lg:text-3xl">Riwayat Transansi</h2>
+            <div>
+                <p>[2024-03-20 10:43] Jean Melakukan Transfer <span class="text-yellow-600">$2</span> kepada ven***@gmail.com</p>
+                <p>[2024-03-20 09:50] Marta Melakukan Transfer <span class="text-yellow-600">$10</span> kepada bulepo***@gmail.com</p>
+                <p>[2024-03-20 09:16] venuzho Melakukan Transfer <span class="text-yellow-600">$10</span> kepada Lase***@gmail.com</p>
+                <p>[2024-03-20 06:22] MasAgung Melakukan Transfer <span class="text-yellow-600">$70</span> kepada jugn****@gmail.com</p>
+                <p>[2024-03-19 17:58] fitri Melakukan Transfer <span class="text-yellow-600">$5</span> kepada taufik****@gmail.com</p>
+                <p>[2024-03-19 14:34] rican Melakukan Transfer <span class="text-yellow-600">$30</span> kepada ri36******@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="p-5 lg:py-24">
+            <h4 class="text-2xl font-bold text-center lg:text-3xl">
+                Informasi dasar:
+            </h4>
+            <div class="grid md:grid-cols-2 md:gap-x-2 md:px-10">
+                <div>
+                    <button id="toggleButton1" class="mt-4 w-full border border-2 font-bold border-black rounded-full py-2 px-3">
+                        Berapa minimum withdraw dan Top up Saldo PAYPAL?
+                    </button>
+                    <div id="collapseText1" class="hidden mt-4">
+                        <p><span class="text-secondary">Tidak ada batasan minimum</span> dalam Withdraw dan Topup saldo paypal namun untuk menghindari biaya administrasi dapat withdraw atau TopUp >50$</p>
+                    </div>
+                </div>
+    
+                <div>
+                    <button id="toggleButton2" class="mt-4 w-full border border-2 font-bold border-black rounded-full py-2 px-3">
+                        Dari jam berapa layanan indocair beroperasi?
+                    </button>
+                    <div id="collapseText2" class="hidden mt-4">
+                        <p>
+                            Indocair beroperasi <span class="text-secondary">24jam</span> dalam sehari namun untuk fast respons jam operasional berkisaran jam <span class="text-secondary">06.00 - 23.00 WIB</span>
+                        </p>
+                    </div>
+                </div>
+    
+                <div>
+                    <button id="toggleButton3" class="mt-4 w-full border border-2 font-bold border-black rounded-full py-2 px-3">
+                        kenapa setelah transfer dana, saya tidak dapat menggunakan dana saya pada akun paypal?
+                    </button>
+                    <div id="collapseText3" class="hidden mt-4">
+                        <p>
+                            Dana yang dibekukan bukan berasal dari pihak indocair namun dari pihak paypal, yang biasanya dikarenakan akun belum pernah atau jarang melakukan transaksi sehingga dibekukan, namun indocair memberikan solusi dimana dana anda pasti akan bisa digunakan melalui video tutorial berikut <a target="_blank" href="https://youtu.be/Q8CHTBRGdIs?si=d45hy4dKEGAhKD3R" class="text-secondary">Click Link Tutorial Ini</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div>
+                    <button id="toggleButton4" class="mt-4 w-full border border-2 font-bold border-black rounded-full py-2 px-3">
+                        Berapa biaya administrasi layanan Indocair?
+                    </button>
+                    <div id="collapseText4" class="hidden mt-4">
+                        <p>
+                            Untuk Biaya administrasi yang ditanggung di Indocair hanya <span class="text-secondary">Rp. 20.000</span> rupiah dengan nominal withdraw/Topup dibawah 25$ dan <span class="text-secondary">Rp. 10.000</span> rupiah dengan nominal dibawah 50$ sedangkan untuk nominal diatas 50$ maka <span class="text-secondary">tidak dikenakan biaya</span> administrasi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-5 py-10 border-t-4 border-t-secondary lg:py-24">
+            <h4 class="text-2xl text-center font-bold mb-5 lg:text-3xl">
+                Kontak <span class="text-secondary">Indo</span>Cair.Net
+            </h4>
+
+            <div class="contact flex flex-col gap-y-4 justify-center md:flex-row md:gap-x-3">
+                <div class="whatsapp text-center bg-stone-700 rounded-full">
+                    <a href="https://api.whatsapp.com/send?phone=6281295149423&text=Halo%20IndoCair&source=&data=">
+                        <div class="py-3 px-8">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 48 48" id="whatsapp" ><rect width="48" height="48" fill="#0DC143" rx="24"></rect><path fill="#fff" d="M34.7507 13.2115C32.1777 10.5628 28.621 9.125 24.9885 9.125C17.2696 9.125 11.0642 15.4061 11.1399 23.0493C11.1399 25.4709 11.821 27.8169 12.9561 29.9358L10.9885 37.125L18.3291 35.2331C20.3723 36.3682 22.6426 36.898 24.9128 36.898C32.5561 36.898 38.7615 30.6169 38.7615 22.9736C38.7615 19.2655 37.3237 15.7845 34.7507 13.2115ZM24.9885 34.552C22.9453 34.552 20.902 34.0223 19.1615 32.9628L18.7074 32.7358L14.3183 33.8709L15.4534 29.5574L15.1507 29.1034C11.821 23.7304 13.4101 16.6169 18.8588 13.2872C24.3074 9.95743 31.3453 11.5466 34.675 16.9953C38.0047 22.4439 36.4156 29.4818 30.9669 32.8115C29.2264 33.9466 27.1074 34.552 24.9885 34.552ZM31.648 26.152L30.8156 25.7736C30.8156 25.7736 29.6047 25.2439 28.848 24.8655C28.7723 24.8655 28.6966 24.7899 28.621 24.7899C28.3939 24.7899 28.2426 24.8655 28.0912 24.9412C28.0912 24.9412 28.0156 25.0169 26.9561 26.2277C26.8804 26.3791 26.7291 26.4547 26.5777 26.4547H26.502C26.4264 26.4547 26.275 26.3791 26.1993 26.3034L25.821 26.152C24.9885 25.7736 24.2318 25.3196 23.6264 24.7142C23.475 24.5628 23.248 24.4115 23.0966 24.2601C22.5669 23.7304 22.0372 23.125 21.6588 22.4439L21.5831 22.2926C21.5074 22.2169 21.5074 22.1412 21.4318 21.9899C21.4318 21.8385 21.4318 21.6872 21.5074 21.6115C21.5074 21.6115 21.8101 21.2331 22.0372 21.0061C22.1885 20.8547 22.2642 20.6277 22.4156 20.4764C22.5669 20.2493 22.6426 19.9466 22.5669 19.7196C22.4912 19.3412 21.5831 17.298 21.3561 16.8439C21.2047 16.6169 21.0534 16.5412 20.8264 16.4655H20.5993C20.448 16.4655 20.221 16.4655 19.9939 16.4655C19.8426 16.4655 19.6912 16.5412 19.5399 16.5412L19.4642 16.6169C19.3128 16.6926 19.1615 16.8439 19.0101 16.9196C18.8588 17.0709 18.7831 17.2223 18.6318 17.3736C18.102 18.0547 17.7993 18.8872 17.7993 19.7196C17.7993 20.325 17.9507 20.9304 18.1777 21.4601L18.2534 21.6872C18.9345 23.125 19.8426 24.4115 21.0534 25.5466L21.3561 25.8493C21.5831 26.0764 21.8101 26.2277 21.9615 26.4547C23.5507 27.8169 25.3669 28.8007 27.4101 29.3304C27.6372 29.4061 27.9399 29.4061 28.1669 29.4818C28.3939 29.4818 28.6966 29.4818 28.9237 29.4818C29.302 29.4818 29.7561 29.3304 30.0588 29.1791C30.2858 29.0277 30.4372 29.0277 30.5885 28.8764L30.7399 28.725C30.8912 28.5736 31.0426 28.498 31.1939 28.3466C31.3453 28.1953 31.4966 28.0439 31.5723 27.8926C31.7237 27.5899 31.7993 27.2115 31.875 26.8331C31.875 26.6818 31.875 26.4547 31.875 26.3034C31.875 26.3034 31.7993 26.2277 31.648 26.152Z"></path></svg>
+                            </div>
+                            <span class="block">+62 812-9514-9423</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="telegram text-center bg-stone-700 rounded-full">
+                    <a href="https://t.me/IndoCair?start=Halo%20IndoCair">
+                        <div class="py-3 px-8">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" id="telegram"><g data-name="Layer 2"><path fill="none" d="M0 0h24v24H0z"></path><path fill="#00abe8" d="M1 12C1 4 4 1 12 1s11 3 11 11-3 11-11 11S1 20 1 12"></path><path fill="#fff" fill-rule="evenodd" d="M17 7 6.25 11.54a.42.42 0 0 0 0 .78l2 .63a2.19 2.19 0 0 0 1.89-.29l4.53-3.13a.16.16 0 0 1 .2.24l-3.47 3.32a.84.84 0 0 0 .11 1.29l3.73 2.52a.84.84 0 0 0 1.29-.56L18 7.8a.73.73 0 0 0-1-.8Z"></path></g></svg>
+                            </div>
+                            <span class="block">@IndoCair</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="email text-center bg-stone-700 rounded-full">
+                    <a href="mailto:indocair.net@gmail.com">
+                        <div class="py-3 px-8">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" enable-background="new 0 0 141.7 141.7" viewBox="0 0 141.7 141.7" id="gmail"><path fill="#4285f4" d="M24.3,111.3h17.2V69.6L16.9,51.3V104C16.9,108,20.2,111.3,24.3,111.3z"></path><path fill="#34a853" d="M100.3,111.3h17.2c4.1,0,7.4-3.3,7.4-7.4V51.3l-24.5,18.4V111.3z"></path><path fill="#fbbc04" d="M100.3,37.8v31.9l24.5-18.4v-9.8c0-9.1-10.4-14.3-17.7-8.8L100.3,37.8z"></path><path fill="#ea4335" fill-rule="evenodd" d="M41.4,69.6V37.8l29.4,22.1l29.4-22.1v31.9L70.9,91.7L41.4,69.6z" clip-rule="evenodd"></path><path fill="#c5221f" d="M16.9,41.4v9.8l24.5,18.4V37.8l-6.9-5.2C27.3,27.2,16.9,32.4,16.9,41.4z"></path></svg>
+                            </div>
+                            <span class="block">indocair.net@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://api.whatsapp.com/send?phone=6281295149423&text=Halo%20IndoCair&source=&data=" class="bg-secondary px-8 py-3 rounded-full hover:bg-opacity-70">Top Up Sekarang</a>
+            </div>
+        </div>
+
+        <footer class="grid gap-y-8 bg-secondary px-5 py-10 text-center md:px-10 md:grid md:grid-cols-2 md:gap-x-5 xl:grid-cols-4 xl:py-20">
+            <div>
+                <h5 class="font-bold text-lg mb-3">IndoCair.net</h5>
+                <p class="xl:text-start">
+                    bergerak dibidang transfer antar pengguna paypal dengan bank lokal indonesia dengan tujuan membuat kenyamanan diantara pengguna paypal dan bank lokal indonesia dengan sistem layanan transfer yang cepat, aman, & murah
+                </p>
+            </div>
+            <div>
+                <h5 class="font-bold text-lg mb-3">Pembayaran</h5>
+                <div class="flex flex-wrap gap-x-1 gap-y-3 justify-center">
+                    <img class="h-16" src="assets/payment/bca.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/bni.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/bri.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/btn.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/niaga.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/danamon.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/mandiri.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/permata.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/indomaret.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/alfa.jpg" alt="logo">
+                    <img class="h-16" src="assets/payment/qris.jpg" alt="logo">
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold text-lg mb-3">Jam Operasional</h5>
+                <p>
+                    24 Jam (06:00-23:00 Fast Respons) Senin-Minggu Libur nasional/international
+                </p>
+            </div>
+            <div>
+                <h5 class="font-bold text-lg mb-3">Kontak</h5>
+                <p>Whatsapp : +62 812-9514-9423 <br>Telegram : @IndoCair <br> Email : indocair.net@gmail.com</p>
+
+                <div class="flex gap-x-5 justify-center mt-5">
+                    <a href="mailto:indocair.net@gmail.com" class="bg-white aspect-square flex justify-center items-center rounded-full hover:bg-yellow-200 p-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-shapes hover:scale-150 transition-all duration-300" width="24" height="24" fill="none" id="gmail"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.111 18.994H4.788C4.192 19.047 3 18.753 3 17.15V7.741c0-2.225 2.3-1.982 3.46-1.116l5.528 4.032 5.644-4.169C18.98 5.418 21 6.169 21 8.448v8.314c0 .888-.237 2.232-2.02 2.232h-2.091v-6.788l-4.9 3.645-4.878-3.645v4.513"></path></svg>
+                    </a>
+                    <a href="https://t.me/IndoCair?start=Halo%20IndoCair" class="bg-white aspect-square flex justify-center items-center rounded-full hover:bg-yellow-200 p-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-shapes hover:scale-150 transition-all duration-300" width="24" height="24" data-name="Layer 1" viewBox="0 0 24 24" id="telegram"><path d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z"></path></svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=6281295149423&text=Halo%20IndoCair&source=&data=" class="bg-white aspect-square flex justify-center items-center rounded-full hover:bg-yellow-200 p-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-shapes hover:scale-150 transition-all duration-300" width="24" height="24" viewBox="0 0 737.509 740.824" id="whatsapp"><path fill-rule="evenodd" d="M630.056 107.658C560.727 38.271 468.525.039 370.294 0 167.891 0 3.16 164.668 3.079 367.072c-.027 64.699 16.883 127.855 49.016 183.523L0 740.824l194.666-51.047c53.634 29.244 114.022 44.656 175.481 44.682h.151c202.382 0 367.128-164.689 367.21-367.094.039-98.088-38.121-190.32-107.452-259.707m-259.758 564.8h-.125c-54.766-.021-108.483-14.729-155.343-42.529l-11.146-6.613-115.516 30.293 30.834-112.592-7.258-11.543c-30.552-48.58-46.689-104.729-46.665-162.379C65.146 198.865 202.065 62 370.419 62c81.521.031 158.154 31.81 215.779 89.482s89.342 134.332 89.311 215.859c-.07 168.242-136.987 305.117-305.211 305.117m167.415-228.514c-9.176-4.591-54.286-26.782-62.697-29.843-8.41-3.061-14.526-4.591-20.644 4.592-6.116 9.182-23.7 29.843-29.054 35.964-5.351 6.122-10.703 6.888-19.879 2.296-9.175-4.591-38.739-14.276-73.786-45.526-27.275-24.32-45.691-54.36-51.043-63.542-5.352-9.183-.569-14.148 4.024-18.72 4.127-4.11 9.175-10.713 13.763-16.07 4.587-5.356 6.116-9.182 9.174-15.303 3.059-6.122 1.53-11.479-.764-16.07-2.294-4.591-20.643-49.739-28.29-68.104-7.447-17.886-15.012-15.466-20.644-15.746-5.346-.266-11.469-.323-17.585-.323-6.117 0-16.057 2.296-24.468 11.478-8.41 9.183-32.112 31.374-32.112 76.521s32.877 88.763 37.465 94.885c4.587 6.122 64.699 98.771 156.741 138.502 21.891 9.45 38.982 15.093 52.307 19.323 21.981 6.979 41.983 5.994 57.793 3.633 17.628-2.633 54.285-22.19 61.932-43.616 7.646-21.426 7.646-39.791 5.352-43.617-2.293-3.826-8.41-6.122-17.585-10.714" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="text-center bg-primary">
+            <h6 class="py-3">© Copyright IndoCair 2024</h6>
+        </div>
+    </div>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#2D2D2D',
+                secondary: '#E73742',
+                third: '#333333'
+              }
+            }
+          }
+        }
+
+        let currentIndex = 0;
+        const texts = [
+            { text: 'Mudah', color: 'sky-400' },
+            { text: 'Murah', color: 'green-400' },
+            { text: 'Cepat', color: 'yellow-300' },
+            { text: 'Aman', color: 'blue-400' }
+        ];
+
+        function changeText() {
+            const { text, color } = texts[currentIndex];
+            dynamicTextElement.textContent = text;
+            dynamicTextElement.classList.remove('text-sky-400', 'text-green-400', 'text-yellow-300', 'text-blue-400');
+            dynamicTextElement.classList.add(`text-${color}`);
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+
+        setInterval(changeText, 2000);
+      </script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
